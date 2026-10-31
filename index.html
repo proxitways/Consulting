@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elepta Edu | IELTS & German Language Learning</title>
+<meta name="description" content="Elepta Edu offers separate online learning programmes for IELTS preparation and German language learning from A1 to B2.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,800&display=swap');
+:root{
+  --ink:#0C1F1C; --cream:#F6F1E5; --gold:#C29A3B; --orange:#B3432B;
+  --coral:#B3432B; --blue:#0C1F1C; --sky:#F6F1E5; --mint:#E2C87E;
+  --purple:#C29A3B; --white:#fff; --muted:#52615e;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Archivo,Arial,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+a{text-decoration:none;color:inherit}.wrap{width:min(1180px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:30;background:rgba(255,250,240,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(12,31,28,.08)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:Fraunces,serif;font-size:26px;font-weight:800}.brand span{color:var(--orange)}
+.links{display:flex;gap:24px;font-weight:700;font-size:14px}.links a:hover{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:999px;font-weight:800;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transition:.18s;background:white}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn.dark{background:var(--ink);color:white}.btn.yellow{background:var(--gold)}.btn.orange{background:var(--orange);color:white}
+.hero{padding:76px 0 62px;position:relative}
+.hero:before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:#E2C87E;opacity:.38;right:-90px;top:30px;filter:blur(2px);z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px}
+.pill{display:inline-flex;padding:9px 14px;border:1.5px solid var(--ink);border-radius:999px;font-size:13px;font-weight:800;background:white}
+h1{font-family:Fraunces,serif;font-size:clamp(50px,7vw,88px);line-height:.96;letter-spacing:-3px;margin:20px 0}
+.hero h1 .a{color:var(--ink)}.hero h1 .b{color:var(--orange)}
+.lead{font-size:19px;line-height:1.7;color:var(--muted);max-width:680px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.hero-card{position:relative;min-height:500px}
+.blob{position:absolute;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);border-radius:32px;padding:26px}
+.blob h3{font-family:Fraunces,serif;font-size:30px;margin:8px 0}.blob p{line-height:1.55}
+.ielts-float{background:#F6F1E5;width:78%;left:0;top:15px;transform:rotate(-3deg)}
+.german-float{background:#E2C87E;width:78%;right:0;bottom:20px;transform:rotate(3deg)}
+.score{font-size:52px;font-weight:800;color:var(--ink)}.levels{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}
+.levels span{background:white;border:1.5px solid var(--ink);padding:7px 10px;border-radius:10px;font-weight:800}
+.band{background:var(--ink);color:white;padding:14px 0;overflow:hidden;font-weight:800;white-space:nowrap}
+.band div{display:inline-block;animation:move 22s linear infinite}@keyframes move{to{transform:translateX(-50%)}}
+section{padding:90px 0}.eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--orange)}
+h2{font-family:Fraunces,serif;font-size:clamp(38px,5vw,62px);line-height:1.04;margin:10px 0 18px;letter-spacing:-1.5px}
+.sub{font-size:18px;color:var(--muted);line-height:1.7;max-width:720px}
+.split-title{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:38px}
+.course-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.course{border:2px solid var(--ink);border-radius:28px;padding:34px;box-shadow:5px 5px 0 var(--ink);position:relative;overflow:hidden}
+.course.ielts{background:#F6F1E5}.course.german{background:#E2C87E}
+.tag{display:inline-block;padding:8px 12px;border-radius:999px;background:white;border:1px solid var(--ink);font-weight:800;font-size:12px}
+.course h3{font-family:Fraunces,serif;font-size:39px;margin:18px 0 10px}.course ul{padding-left:20px;line-height:2}
+.separate{margin-top:22px;padding:14px;border:1.5px dashed var(--ink);border-radius:14px;font-weight:700;background:rgba(255,255,255,.55)}
+#ielts{background:#fff}.modules{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.module{background:white;border:2px solid var(--ink);border-radius:22px;padding:22px;min-height:180px}
+.module .icon{font-size:32px}.module h4{font-size:20px;margin:12px 0 8px}.module p{color:var(--muted);line-height:1.55;margin:0}
+#german{background:#F6F1E5}.path{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:35px}
+.level{border:2px solid var(--ink);border-radius:24px;padding:26px;background:white;box-shadow:5px 5px 0 var(--ink)}
+.level:nth-child(1){background:#F6F1E5}.level:nth-child(2){background:#F0E7D0}.level:nth-child(3){background:#EAD9A9}.level:nth-child(4){background:#E2C87E}
+.level strong{font-family:Fraunces,serif;font-size:44px}.level h4{font-size:19px;margin:8px 0}.level p{color:var(--muted);line-height:1.55}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.why{padding:26px;border-radius:22px;border:1.5px solid var(--ink);background:white}.why b{display:block;font-size:18px;margin:10px 0}.why span{font-size:30px}
+.feedback{background:var(--ink);color:white}.feedback .eyebrow{color:var(--gold)}.feedback .sub{color:#cdd8d5}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.review{background:white;color:var(--ink);padding:28px;border-radius:24px;position:relative}.stars{color:#C29A3B;letter-spacing:2px}.quote{font-family:Fraunces,serif;font-size:20px;line-height:1.45}.person{font-weight:800;margin-top:18px}.demo{font-size:11px;color:#7a8582;margin-top:8px}
+.cta{padding:90px 0}.cta-box{background:linear-gradient(120deg,#E2C87E,#C29A3B);border:2px solid var(--ink);border-radius:34px;padding:54px;box-shadow:6px 6px 0 var(--ink);display:flex;align-items:center;justify-content:space-between;gap:30px}.cta-box h2{max-width:650px;margin:0}.cta-box p{font-weight:600;line-height:1.6}
+footer{background:var(--ink);color:white;padding:45px 0}.footer{display:flex;justify-content:space-between;gap:25px;align-items:center}.footer small{color:#aab8b4}
+@media(max-width:850px){
+ .links{display:none}.hero-grid,.course-grid{grid-template-columns:1fr}.hero-card{min-height:470px}
+ .modules,.path{grid-template-columns:1fr 1fr}.reviews,.why-grid{grid-template-columns:1fr}.cta-box,.split-title,.footer{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:520px){.modules,.path{grid-template-columns:1fr}.hero{padding-top:48px}.hero-card{min-height:430px}.blob{padding:20px}.ielts-float,.german-float{width:88%}.cta-box{padding:30px}h1{letter-spacing:-2px}}
+
+/* --- Mobile-first refinements --- */
+html, body { max-width:100%; overflow-x:hidden; }
+img, svg { max-width:100%; height:auto; }
+.btn { -webkit-tap-highlight-color:transparent; }
+@media (max-width: 850px) {
+  .wrap { width:min(92%, 680px); }
+  nav .nav { height:68px; }
+  .brand { font-size:23px; }
+  nav .btn { padding:11px 14px; font-size:13px; box-shadow:3px 3px 0 var(--ink); }
+
+  .hero { padding:42px 0 42px; }
+  .hero-grid { grid-template-columns:1fr; gap:28px; }
+  h1 { font-size:clamp(44px, 13vw, 64px); line-height:.98; letter-spacing:-2px; margin:16px 0; }
+  .lead { font-size:16px; line-height:1.65; }
+  .hero-actions { gap:11px; margin-top:24px; }
+  .hero-actions .btn { flex:1 1 190px; }
+
+  .hero-card { min-height:430px; width:100%; }
+  .blob { border-radius:24px; padding:21px; box-shadow:4px 4px 0 var(--ink); }
+  .ielts-float { width:88%; left:0; top:10px; transform:rotate(-1.5deg); }
+  .german-float { width:88%; right:0; bottom:12px; transform:rotate(1.5deg); }
+  .blob h3 { font-size:26px; }
+  .score { font-size:39px; }
+
+  section { padding:62px 0; }
+  .split-title { display:block; margin-bottom:28px; }
+  h2 { font-size:clamp(35px, 10vw, 50px); line-height:1.05; }
+  .sub { font-size:16px; }
+  .course-grid { grid-template-columns:1fr; gap:20px; }
+  .course { padding:25px 22px; border-radius:23px; box-shadow:4px 4px 0 var(--ink); }
+  .course h3 { font-size:32px; }
+  .course ul { padding-left:18px; line-height:1.8; }
+
+  .modules, .path { grid-template-columns:1fr 1fr; gap:13px; }
+  .module, .level { min-height:auto; padding:20px; border-radius:19px; }
+  .level strong { font-size:38px; }
+
+  .why-grid, .reviews { grid-template-columns:1fr; gap:14px; }
+  .why, .review { padding:22px; }
+  .quote { font-size:18px; }
+
+  .cta { padding:62px 0; }
+  .cta-box { flex-direction:column; align-items:stretch; padding:30px 24px; border-radius:25px; box-shadow:4px 4px 0 var(--ink); }
+  .cta-box .btn { width:100%; }
+
+  .footer { flex-direction:column; align-items:flex-start; gap:14px; }
+}
+@media (max-width: 560px) {
+  .wrap { width:91%; }
+  nav .nav { gap:10px; }
+  nav .btn { padding:10px 12px; font-size:12px; }
+  .pill { font-size:11px; padding:8px 11px; }
+  h1 { font-size:clamp(41px, 12.8vw, 55px); }
+  .hero-card { min-height:410px; }
+  .ielts-float, .german-float { width:92%; }
+  .blob { padding:18px; }
+  .blob h3 { font-size:23px; }
+  .blob p { font-size:14px; }
+  .score { font-size:33px; }
+  .levels span { padding:6px 9px; font-size:13px; }
+
+  section { padding:54px 0; }
+  .modules, .path { grid-template-columns:1fr; }
+  .module { display:grid; grid-template-columns:auto 1fr; column-gap:14px; align-items:start; }
+  .module .icon { grid-row:1 / span 2; }
+  .module h4 { margin:2px 0 5px; }
+  .module p { grid-column:2; }
+
+  .course .btn, #ielts .hero-actions .btn, #german .hero-actions .btn { width:100%; }
+  .band { font-size:13px; }
+}
+@media (max-width: 380px) {
+  .brand { font-size:20px; }
+  nav .btn { font-size:11px; padding:9px 10px; }
+  h1 { font-size:39px; }
+  .hero-card { min-height:395px; }
+}
+
+</style>
+</head>
+<body>
+<nav>
+ <div class="wrap nav">
+  <a class="brand" href="#">ELEPTA <span>EDU</span></a>
+  <div class="links"><a href="#courses">Courses</a><a href="#ielts">IELTS</a><a href="#german">German</a><a href="#feedback">Feedback</a></div>
+  <a class="btn yellow" href="https://wa.me/4915231894762?text=Hi%20Elepta%20Edu%2C%20I%27d%20like%20to%20know%20more%20about%20your%20courses.">Talk to us ↗</a>
+ </div>
+</nav>
+
+<header class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <span class="pill">🌍 ONLINE LANGUAGE LEARNING</span>
+   <h1>Learn boldly.<br><span class="a">Speak confidently.</span><br><span class="b">Go further.</span></h1>
+   <p class="lead">Two different learning journeys, one supportive education brand. Choose focused <b>IELTS preparation</b> or learn <b>German from A1 to B2</b>.</p>
+   <div class="hero-actions"><a class="btn dark" href="#courses">Explore courses ↓</a><a class="btn" href="https://wa.me/4915231894762?text=Hi%20Elepta%20Edu%2C%20I%20need%20help%20choosing%20a%20course.">Get guidance</a></div>
+  </div>
+  <div class="hero-card">
+   <div class="blob ielts-float"><span class="tag">IELTS PREPARATION</span><h3>Build your band skills.</h3><div class="score">L • R • W • S</div><p>Focused preparation for Listening, Reading, Writing and Speaking.</p></div>
+   <div class="blob german-float"><span class="tag">GERMAN LANGUAGE</span><h3>Deutsch lernen 🇩🇪</h3><div class="levels"><span>A1</span><span>A2</span><span>B1</span><span>B2</span></div><p>A separate structured German pathway from beginner to upper-intermediate.</p></div>
+  </div>
+ </div>
+</header>
+
+<div class="band"><div>IELTS PREPARATION ✦ GERMAN A1 ✦ GERMAN A2 ✦ GERMAN B1 ✦ GERMAN B2 ✦ SPEAK WITH CONFIDENCE ✦ IELTS PREPARATION ✦ GERMAN A1 ✦ GERMAN A2 ✦ GERMAN B1 ✦ GERMAN B2 ✦ SPEAK WITH CONFIDENCE ✦ </div></div>
+
+<section id="courses">
+ <div class="wrap">
+  <div class="split-title"><div><div class="eyebrow">Choose your course</div><h2>Two separate programmes.<br>Built for different goals.</h2></div><p class="sub">IELTS and German are not bundled together. Enrol in the programme that matches what you want to achieve.</p></div>
+  <div class="course-grid">
+   <article class="course ielts"><span class="tag">COURSE 01</span><h3>IELTS Preparation 🇬🇧</h3><p>Targeted preparation for learners planning to take the IELTS test.</p><ul><li>Listening & Reading strategies</li><li>Writing practice & feedback</li><li>Speaking practice</li><li>Mock-test preparation</li><li>Personal learning support</li></ul><div class="separate">✓ Independent IELTS programme</div><br><a class="btn dark" href="#ielts">Explore IELTS</a></article>
+   <article class="course german"><span class="tag">COURSE 02</span><h3>German Language 🇩🇪</h3><p>A structured language-learning pathway for students starting from beginner level and progressing further.</p><ul><li>A1 — Beginner</li><li>A2 — Elementary</li><li>B1 — Intermediate</li><li><b>B2 — Upper-intermediate</b></li><li>Speaking, grammar & vocabulary</li></ul><div class="separate">✓ Independent German programme</div><br><a class="btn dark" href="#german">Explore German</a></article>
+  </div>
+ </div>
+</section>
+
+<section id="ielts">
+ <div class="wrap">
+  <div class="eyebrow">IELTS Preparation</div><h2>Prepare each skill.<br>Strengthen your overall performance.</h2>
+  <p class="sub">A focused IELTS programme built around the four test skills, regular practice and practical feedback.</p>
+  <div class="modules">
+   <div class="module"><div class="icon">🎧</div><h4>Listening</h4><p>Question types, attention to detail and timed listening practice.</p></div>
+   <div class="module"><div class="icon">📖</div><h4>Reading</h4><p>Skimming, scanning, time management and answer strategies.</p></div>
+   <div class="module"><div class="icon">✍️</div><h4>Writing</h4><p>Task structure, idea development and feedback on your writing.</p></div>
+   <div class="module"><div class="icon">🎙️</div><h4>Speaking</h4><p>Fluency, confidence and practice for common IELTS speaking formats.</p></div>
+  </div>
+  <div class="hero-actions"><a class="btn dark" href="https://wa.me/4915231894762?text=Hi%20Elepta%20Edu%2C%20I%27m%20interested%20in%20IELTS%20preparation.">Ask about IELTS ↗</a></div>
+ </div>
+</section>
+
+<section id="german">
+ <div class="wrap">
+  <div class="eyebrow">German Language</div><h2>From Hallo to confident German. 🇩🇪</h2>
+  <p class="sub">Start at the level that suits you and build progressively through A1, A2, B1 and B2.</p>
+  <div class="path">
+   <div class="level"><strong>A1</strong><h4>Beginner</h4><p>Introductions, everyday vocabulary, basic grammar and simple conversations.</p></div>
+   <div class="level"><strong>A2</strong><h4>Elementary</h4><p>Handle common everyday situations and build stronger sentence structures.</p></div>
+   <div class="level"><strong>B1</strong><h4>Intermediate</h4><p>Communicate more independently about familiar topics, work and daily life.</p></div>
+   <div class="level"><strong>B2</strong><h4>Upper-intermediate</h4><p>Develop more fluent, detailed communication and understand more complex German.</p></div>
+  </div>
+  <div class="hero-actions"><a class="btn orange" href="https://wa.me/4915231894762?text=Hi%20Elepta%20Edu%2C%20I%27m%20interested%20in%20German%20language%20learning.">Ask about German ↗</a></div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="eyebrow">Why Elepta Edu</div><h2>Learning that feels clear,<br>personal and achievable.</h2>
+  <div class="why-grid">
+   <div class="why"><span>🧭</span><b>Clear learning path</b><p>Know what you're learning and what comes next.</p></div>
+   <div class="why"><span>💬</span><b>Practical communication</b><p>Build usable language skills, not just memorised rules.</p></div>
+   <div class="why"><span>📈</span><b>Progress focused</b><p>Practice, feedback and improvement stay at the centre.</p></div>
+   <div class="why"><span>🧑‍💻</span><b>Online learning</b><p>Learn flexibly from wherever you are.</p></div>
+   <div class="why"><span>🎯</span><b>Goal based</b><p>Choose IELTS or German based on your individual goal.</p></div>
+   <div class="why"><span>🤝</span><b>Supportive approach</b><p>Get guidance when you need help moving forward.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="feedback" id="feedback">
+ <div class="wrap">
+  <div class="eyebrow">Learner feedback</div><h2>What students say.</h2>
+  <p class="sub">The cards below are clearly marked demo placeholders for launch. Replace them with genuine student feedback once collected.</p>
+  <div class="reviews">
+   <div class="review"><div class="stars">★★★★★</div><p class="quote">“The learning plan made it much easier to understand what I needed to practise each week.”</p><div class="person">Sample — IELTS learner</div><div class="demo">DEMO FEEDBACK • Replace before publishing as a real testimonial</div></div>
+   <div class="review"><div class="stars">★★★★★</div><p class="quote">“German felt difficult at first, but having a clear level-by-level structure made the process less confusing.”</p><div class="person">Sample — German learner</div><div class="demo">DEMO FEEDBACK • Replace before publishing as a real testimonial</div></div>
+   <div class="review"><div class="stars">★★★★★</div><p class="quote">“The speaking practice helped me identify where I was hesitating and what I needed to improve.”</p><div class="person">Sample — IELTS learner</div><div class="demo">DEMO FEEDBACK • Replace before publishing as a real testimonial</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="wrap">
+  <div class="cta-box"><div><div class="eyebrow" style="color:#0c1f1c">Ready to begin?</div><h2>Choose your language goal. We’ll help you take the next step.</h2><p>Message Elepta Edu to enquire about IELTS preparation or German A1–B2 learning.</p></div><a class="btn dark" href="https://wa.me/4915231894762?text=Hi%20Elepta%20Edu%2C%20I%27d%20like%20to%20start%20learning.">WhatsApp us ↗</a></div>
+ </div>
+</section>
+
+<footer><div class="wrap footer"><div><div class="brand">ELEPTA <span>EDU</span></div><small>Learn. Prepare. Achieve.</small></div><small>© 2026 Elepta Edu. All rights reserved.</small></div></footer>
+</body>
+</html>
