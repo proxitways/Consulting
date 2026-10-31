@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Elepta Holdings | One Group. Multiple Possibilities.</title>
+
+  <meta
+    name="description"
+    content="Elepta Holdings is the parent company behind Elepta Formations, Elepta Consulting and Elepta Edu — building businesses, creating opportunities and developing future ventures."
+  />
+
+  <meta name="theme-color" content="#0C1F1C" />
+
+  <!-- Open Graph / Link Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Elepta Holdings | One Group. Multiple Possibilities." />
+  <meta
+    property="og:description"
+    content="Building businesses. Creating opportunities. Discover the companies and future ventures under Elepta Holdings."
+  />
+  <meta property="og:image" content="preview.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Spline+Sans+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --cream: #F6F1E5;
+      --cream-dark: #EDE5D3;
+      --green: #0C1F1C;
+      --green-soft: #16312C;
+      --green-light: #23483F;
+      --gold: #C29A3B;
+      --gold-light: #E2C87E;
+      --terracotta: #B3432B;
+      --white: #FFFDF8;
+      --text-soft: #64706B;
+      --border: rgba(12, 31, 28, 0.13);
+      --shadow: 0 20px 60px rgba(12, 31, 28, 0.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Archivo", sans-serif;
+      background: var(--cream);
+      color: var(--green);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
+
+    .nav.scrolled {
+      background: rgba(246, 241, 229, 0.94);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+      height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: "Fraunces", serif;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-symbol {
+      width: 39px;
+      height: 39px;
+      background: var(--green);
+      color: var(--gold-light);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-family: "Fraunces", serif;
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      left: 0;
+      bottom: -7px;
+      background: var(--gold);
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-button {
+      padding: 12px 20px;
+      background: var(--green);
+      color: var(--white) !important;
+      border-radius: 100px;
+    }
+
+    .nav-button::after {
+      display: none;
+    }
+
+    .menu-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      background: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      color: var(--green);
+      font-size: 20px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 130px 0 70px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border: 1px solid rgba(194, 154, 59, 0.23);
+      border-radius: 50%;
+      right: -220px;
+      top: -170px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 440px;
+      height: 440px;
+      border: 1px solid rgba(194, 154, 59, 0.13);
+      border-radius: 50%;
+      right: -80px;
+      top: 20px;
+    }
+
+    .hero-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: "Spline Sans Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(58px, 7vw, 102px);
+      line-height: 0.94;
+      letter-spacing: -4px;
+      font-weight: 600;
+      max-width: 850px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .hero-copy {
+      max-width: 600px;
+      margin-top: 32px;
+      font-size: 18px;
+      line-height: 1.75;
+      color: #4D5A56;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 38px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 25px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-soft);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .hero-side {
+      display: flex;
+      justify-content: center;
+    }
+
+    .holdings-orbit {
+      position: relative;
+      width: 390px;
+      height: 390px;
+      border-radius: 50%;
+      border: 1px solid rgba(12,31,28,.16);
+      display: grid;
+      place-items: center;
+    }
+
+    .holdings-orbit::before {
+      content: "";
+      position: absolute;
+      inset: 40px;
+      border-radius: 50%;
+      border: 1px dashed rgba(194,154,59,.45);
+      animation: rotate 30s linear infinite;
+    }
+
+    @keyframes rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    .orbit-center {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: var(--green);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .orbit-center strong {
+      font-family: "Fraunces", serif;
+      font-size: 25px;
+    }
+
+    .orbit-center small {
+      color: var(--gold-light);
+      font-family: "Spline Sans Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-top: 5px;
+    }
+
+    .orbit-dot {
+      position: absolute;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 35px rgba(12,31,28,.08);
+      padding: 11px 15px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .dot-1 { top: 18px; }
+    .dot-2 { right: -30px; top: 175px; }
+    .dot-3 { bottom: 25px; }
+    .dot-4 { left: -30px; top: 175px; color: var(--gold); }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      background: var(--green);
+      color: var(--white);
+      padding: 110px 0;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .section-label {
+      color: var(--gold-light);
+      font-family: "Spline Sans Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+    }
+
+    .intro h2,
+    .section-title {
+      font-family: "Fraunces", serif;
+      font-weight: 500;
+      letter-spacing: -2px;
+    }
+
+    .intro h2 {
+      font-size: clamp(42px, 5vw, 67px);
+      line-height: 1.05;
+      margin-top: 22px;
+    }
+
+    .intro-text {
+      font-size: 20px;
+      line-height: 1.75;
+      color: rgba(255,255,255,.76);
+      padding-top: 35px;
+    }
+
+    .intro-text strong {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    /* =========================
+       COMPANIES
+    ========================= */
+
+    .companies {
+      padding: 120px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: clamp(45px, 5vw, 70px);
+      line-height: 1.05;
+      margin-top: 18px;
+    }
+
+    .section-description {
+      margin-top: 22px;
+      color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 17px;
+      max-width: 650px;
+    }
+
+    .company-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .company-card {
+      min-height: 470px;
+      padding: 35px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      transition: 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .company-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: rgba(194,154,59,.5);
+    }
+
+    .company-number {
+      font-family: "Spline Sans Mono", monospace;
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .company-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--green);
+      color: var(--gold-light);
+      display: grid;
+      place-items: center;
+      font-family: "Fraunces", serif;
+      font-size: 23px;
+      margin: 55px 0 25px;
+    }
+
+    .company-card h3 {
+      font-family: "Fraunces", serif;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+
+    .company-card p {
+      margin-top: 18px;
+      color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .company-links {
+      margin-top: auto;
+      padding-top: 35px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .company-link {
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      gap: 7px;
+      align-items: center;
+      transition: 0.2s;
+    }
+
+    .company-link:hover {
+      color: var(--gold);
+    }
+
+    .instagram {
+      color: var(--text-soft);
+    }
+
+    /* =========================
+       FUTURE
+    ========================= */
+
+    .future {
+      padding: 40px 0 120px;
+    }
+
+    .future-card {
+      min-height: 520px;
+      background: var(--green);
+      border-radius: 35px;
+      padding: 70px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .future-card::after {
+      content: "E";
+      position: absolute;
+      right: -20px;
+      top: -125px;
+      font-family: "Fraunces", serif;
+      font-size: 600px;
+      color: rgba(255,255,255,.025);
+      line-height: 1;
+    }
+
+    .future-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .future h2 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(50px, 7vw, 90px);
+      line-height: .98;
+      letter-spacing: -3px;
+      font-weight: 500;
+      margin: 20px 0 28px;
+    }
+
+    .future h2 span {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .future p {
+      color: rgba(255,255,255,.7);
+      line-height: 1.8;
+      font-size: 17px;
+      max-width: 650px;
+    }
+
+    .future-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 35px;
+    }
+
+    .future-tag {
+      border: 1px solid rgba(255,255,255,.17);
+      padding: 10px 15px;
+      border-radius: 100px;
+      color: rgba(255,255,255,.72);
+      font-size: 12px;
+    }
+
+    /* =========================
+       VALUES
+    ========================= */
+
+    .values {
+      padding: 110px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .values-grid {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border);
+    }
+
+    .value {
+      padding: 40px 40px 40px 0;
+      border-right: 1px solid var(--border);
+    }
+
+    .value:nth-child(2),
+    .value:nth-child(3) {
+      padding-left: 40px;
+    }
+
+    .value:last-child {
+      border-right: 0;
+    }
+
+    .value span {
+      color: var(--gold);
+      font-family: "Spline Sans Mono", monospace;
+      font-size: 11px;
+    }
+
+    .value h3 {
+      font-family: "Fraunces", serif;
+      font-size: 30px;
+      margin: 22px 0 15px;
+    }
+
+    .value p {
+      color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(50px, 7vw, 85px);
+      letter-spacing: -3px;
+      line-height: 1;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    .cta p {
+      color: var(--text-soft);
+      line-height: 1.7;
+      max-width: 620px;
+      margin: 25px auto 35px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--green);
+      color: var(--white);
+      padding: 75px 0 35px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 70px;
+      padding-bottom: 60px;
+    }
+
+    .footer-brand h3 {
+      font-family: "Fraunces", serif;
+      font-size: 30px;
+    }
+
+    .footer-brand h3 span {
+      color: var(--gold-light);
+    }
+
+    .footer-brand p {
+      max-width: 400px;
+      margin-top: 20px;
+      color: rgba(255,255,255,.58);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .footer-column h4 {
+      color: var(--gold-light);
+      font-family: "Spline Sans Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 10px;
+      margin-bottom: 22px;
+    }
+
+    .footer-column a {
+      display: block;
+      margin-bottom: 14px;
+      color: rgba(255,255,255,.67);
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .footer-column a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255,255,255,.4);
+      font-size: 11px;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+      .nav-links {
+        position: fixed;
+        top: 84px;
+        left: 20px;
+        right: 20px;
+        background: var(--cream);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: 0.3s ease;
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-side {
+        margin-top: 30px;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .company-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .company-card {
+        min-height: 400px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .value,
+      .value:nth-child(2),
+      .value:nth-child(3) {
+        padding: 35px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-inner,
+      .container,
+      .hero-inner {
+        width: min(100% - 30px, 1180px);
+      }
+
+      .nav-inner {
+        height: 74px;
+      }
+
+      .nav-links {
+        top: 74px;
+        left: 15px;
+        right: 15px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .logo-symbol {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 135px;
+        padding-bottom: 80px;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+      }
+
+      .hero-copy {
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .holdings-orbit {
+        width: 300px;
+        height: 300px;
+      }
+
+      .orbit-center {
+        width: 145px;
+        height: 145px;
+      }
+
+      .orbit-center strong {
+        font-size: 20px;
+      }
+
+      .dot-2 {
+        right: -10px;
+        top: 135px;
+      }
+
+      .dot-4 {
+        left: -10px;
+        top: 135px;
+      }
+
+      .intro,
+      .companies,
+      .values {
+        padding: 80px 0;
+      }
+
+      .company-card {
+        padding: 28px;
+      }
+
+      .company-icon {
+        margin-top: 38px;
+      }
+
+      .future {
+        padding-bottom: 80px;
+      }
+
+      .future-card {
+        min-height: 570px;
+        border-radius: 25px;
+        padding: 38px 28px;
+      }
+
+      .future h2 {
+        font-size: 55px;
+      }
+
+      .cta {
+        padding: 80px 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+
+      <a href="#home" class="logo">
+        <div class="logo-symbol">E</div>
+        ELEPTA <span>HOLDINGS</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#companies">Our Companies</a>
+        <a href="#future">Future</a>
+        <a href="#vision">Vision</a>
+        <a href="#companies" class="nav-button">Explore Elepta</a>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+
+    <div class="hero-inner">
+
+      <div>
+        <div class="eyebrow">Elepta Holdings</div>
+
+        <h1>
+          One Group.<br />
+          <span>Multiple</span><br />
+          Possibilities.
+        </h1>
+
+        <p class="hero-copy">
+          Elepta Holdings is the home of a growing family of businesses
+          built around one idea — creating opportunities, simplifying
+          possibilities and building ventures designed for tomorrow.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#companies" class="btn btn-primary">
+            Explore Our Companies →
+          </a>
+
+          <a href="#about" class="btn btn-secondary">
+            Discover Elepta
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+
+        <div class="holdings-orbit">
+
+          <div class="orbit-center">
+            <strong>ELEPTA</strong>
+            <small>HOLDINGS</small>
+          </div>
+
+          <div class="orbit-dot dot-1">FORMATIONS</div>
+          <div class="orbit-dot dot-2">CONSULTING</div>
+          <div class="orbit-dot dot-3">EDU</div>
+          <div class="orbit-dot dot-4">WHAT'S NEXT?</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ABOUT -->
+  <section class="intro" id="about">
+
+    <div class="container intro-grid">
+
+      <div class="reveal">
+        <div class="section-label">Who We Are</div>
+
+        <h2>
+          Building beyond
+          a single business.
+        </h2>
+      </div>
+
+      <div class="intro-text reveal">
+        Elepta Holdings is the parent group behind a growing portfolio
+        of businesses operating across different sectors.
+
+        <br /><br />
+
+        From helping entrepreneurs establish companies internationally,
+        to supporting people pursuing opportunities in Germany and
+        providing language and education services, each Elepta company
+        has its own purpose while sharing a common vision.
+
+        <br /><br />
+
+        <strong>
+          And this is only the beginning.
+        </strong>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COMPANIES -->
+  <section class="companies" id="companies">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <div class="section-label" style="color:#C29A3B;">
+          The Elepta Group
+        </div>
+
+        <h2 class="section-title">
+          Our companies.
+        </h2>
+
+        <p class="section-description">
+          Independent businesses. One shared ambition. Explore the
+          companies currently operating under Elepta Holdings.
+        </p>
+
+      </div>
+
+
+      <div class="company-grid">
+
+        <!-- ELEPTA FORMATIONS -->
+        <article class="company-card reveal">
+
+          <div class="company-number">01 / FORMATIONS</div>
+
+          <div class="company-icon">EF</div>
+
+          <h3>Elepta Formations</h3>
+
+          <p>
+            Business formation and international company setup support
+            for entrepreneurs looking to establish and grow businesses
+            across global markets.
+          </p>
+
+          <div class="company-links">
+
+            <a
+              href="https://elepta.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Visit Website ↗
+            </a>
+
+            <a
+              href="https://www.instagram.com/elepta_com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link instagram"
+            >
+              Instagram ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- ELEPTA CONSULTING -->
+        <article class="company-card reveal">
+
+          <div class="company-number">02 / CONSULTING</div>
+
+          <div class="company-icon">EC</div>
+
+          <h3>Elepta Consulting</h3>
+
+          <p>
+            Germany-focused consulting supporting international
+            students, professionals and families exploring education,
+            career and relocation opportunities.
+          </p>
+
+          <div class="company-links">
+
+            <a
+              href="https://eleptaconsulting.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Visit Website ↗
+            </a>
+
+            <a
+              href="https://www.instagram.com/elepta_consulting"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link instagram"
+            >
+              Instagram ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- ELEPTA EDU -->
+        <article class="company-card reveal">
+
+          <div class="company-number">03 / EDUCATION</div>
+
+          <div class="company-icon">EE</div>
+
+          <h3>Elepta Edu</h3>
+
+          <p>
+            Language and learning support designed to help students
+            progress with confidence, including IELTS preparation and
+            German language learning from beginner through B2.
+          </p>
+
+          <div class="company-links">
+
+            <a
+              href="https://eleptaedu.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Visit Website ↗
+            </a>
+
+            <a
+              href="https://www.instagram.com/elepta_edu"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link instagram"
+            >
+              Instagram ↗
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FUTURE -->
+  <section class="future" id="future">
+
+    <div class="container">
+
+      <div class="future-card reveal">
+
+        <div class="future-content">
+
+          <div class="section-label">
+            The Next Chapter
+          </div>
+
+          <h2>
+            What's <span>next?</span>
+          </h2>
+
+          <p>
+            Elepta Holdings was created to grow beyond any one industry.
+            As opportunities evolve, so will we. Our future ventures may
+            take us into new markets, new industries and entirely new
+            ideas — all under the Elepta name.
+          </p>
+
+          <div class="future-tags">
+            <div class="future-tag">Logistics</div>
+            <div class="future-tag">Technology</div>
+            <div class="future-tag">International Trade</div>
+            <div class="future-tag">New Ventures</div>
+            <div class="future-tag">+ More to Come</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- VISION -->
+  <section class="values" id="vision">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <div class="section-label" style="color:#C29A3B;">
+          What Drives Us
+        </div>
+
+        <h2 class="section-title">
+          Built with a bigger vision.
+        </h2>
+
+      </div>
+
+
+      <div class="values-grid">
+
+        <div class="value reveal">
+
+          <span>01</span>
+
+          <h3>Build</h3>
+
+          <p>
+            Develop businesses with clear purpose, strong identities
+            and the ability to create lasting value.
+          </p>
+
+        </div>
+
+
+        <div class="value reveal">
+
+          <span>02</span>
+
+          <h3>Connect</h3>
+
+          <p>
+            Connect people, businesses and opportunities across
+            countries, industries and communities.
+          </p>
+
+        </div>
+
+
+        <div class="value reveal">
+
+          <span>03</span>
+
+          <h3>Grow</h3>
+
+          <p>
+            Continue exploring new ideas and industries while building
+            a diversified Elepta group for the future.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <div class="container reveal">
+
+      <div class="section-label" style="color:#C29A3B;">
+        Elepta Holdings
+      </div>
+
+      <h2>
+        We are only getting started.
+      </h2>
+
+      <p>
+        Three businesses today. More possibilities tomorrow.
+        Follow the growth of Elepta as we continue building,
+        exploring and expanding into new opportunities.
+      </p>
+
+      <a href="#companies" class="btn btn-primary">
+        Explore the Elepta Group →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <h3>
+            ELEPTA <span>HOLDINGS</span>
+          </h3>
+
+          <p>
+            A growing group of businesses built around opportunity,
+            entrepreneurship, education and the ventures of tomorrow.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Our Companies</h4>
+
+          <a
+            href="https://elepta.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Elepta Formations ↗
+          </a>
+
+          <a
+            href="https://eleptaconsulting.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Elepta Consulting ↗
+          </a>
+
+          <a
+            href="https://eleptaedu.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Elepta Edu ↗
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Instagram</h4>
+
+          <a
+            href="https://www.instagram.com/elepta_com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @elepta_com ↗
+          </a>
+
+          <a
+            href="https://www.instagram.com/elepta_consulting"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @elepta_consulting ↗
+          </a>
+
+          <a
+            href="https://www.instagram.com/elepta_edu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @elepta_edu ↗
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © <span id="year"></span> Elepta Holdings. All rights reserved.
+        </div>
+
+        <div>
+          Building businesses. Creating possibilities.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+    /* Mobile Menu */
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+
+      if (navLinks.classList.contains("open")) {
+        menuBtn.innerHTML = "×";
+      } else {
+        menuBtn.innerHTML = "☰";
+      }
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.innerHTML = "☰";
+      });
+    });
+
+
+    /* Navbar Background */
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 30) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+
+    /* Scroll Reveal */
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    /* Current Year */
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
